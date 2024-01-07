@@ -9,7 +9,7 @@ ccache -s
 BUILD_FLAVOR="mainline"
 
 BUILD_TYPE="release"
-if [ "${GITHUB_REPOSITORY}" == "yuzu-emu/yuzu" ]; then
+if [ "${GITHUB_REPOSITORY}" == "diveintolava/yuzu-android" ]; then
     BUILD_TYPE="relWithDebInfo"
 fi
 
