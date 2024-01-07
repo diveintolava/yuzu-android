@@ -8,7 +8,7 @@
 
     <!-- Setup strings -->
     <string name="welcome">欢迎！</string>
-    <string name="welcome_description">了解如何设置 &lt;b>yuzu&lt;/b> 并进行模拟。</string>
+    <string name="welcome_description">了解如何设置 &lt;b>yuzu lava&lt;/b> 并进行模拟。</string>
     <string name="get_started">开始</string>
     <string name="keys">密钥文件</string>
     <string name="keys_description">使用下方的按钮来选择你的 &lt;b>prod.keys&lt;/b> 文件。</string>
@@ -51,7 +51,7 @@
     <string name="notification_warning_description">yuzu 将无法通知您重要信息。</string>
     <string name="permission_denied">授权遭拒</string>
     <string name="permission_denied_description">您曾多次拒绝权限请求，现在您需要在系统设置中手动授予权限。</string>
-    <string name="about">关于</string>
+    <string name="about">关于yuzu lava</string>
     <string name="about_description">开发版本、贡献者、以及更多</string>
     <string name="warning_help">帮助</string>
     <string name="warning_skip">跳过</string>

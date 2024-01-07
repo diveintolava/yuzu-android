@@ -174,12 +174,12 @@ async function fetchPullRequests(pulls, repoUrl, execa) {
 async function mergePullRequests(pulls, execa) {
     let mergeResults = {};
     console.log("::group::Merge pull requests");
-    await execa("git", ["config", "--global", "user.name", "yuzubot"]);
+    await execa("git", ["config", "--global", "user.name", "diveintolava"]);
     await execa("git", [
         "config",
         "--global",
         "user.email",
-        "yuzu\x40yuzu-emu\x2eorg", // prevent email harvesters from scraping the address
+        "10369140\x2bdiveintolava\x40users\x2enoreply\x2egithub\x2ecom", // when in rome XD
     ]);
     let hasFailed = false;
     for (let pull of pulls) {
@@ -305,10 +305,10 @@ async function mergebot(github, context, execa) {
     const mergeResults = await mergePullRequests(pulls, execa);
 
     if (BUILD_EA) {
-        await tagAndPushEA(github, 'yuzu-emu', `yuzu-android`, execa);
+        await tagAndPushEA(github, 'diveintolava', `yuzu-android`, execa);
     } else {
         await generateReadme(pulls, context, mergeResults, execa);
-        await tagAndPush(github, 'yuzu-emu', `yuzu-android`, execa, true);
+        await tagAndPush(github, 'diveintolava', `yuzu-android`, execa, true);
     }
 }
 

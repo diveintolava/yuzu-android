@@ -6,11 +6,11 @@ name: 'yuzu-android-build'
 on:
   push:
     tags: [ "*" ]
-
+    branches: [ lava-dev ]
 jobs:
   android:
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'yuzu-emu/yuzu-android' }}
+    if: ${{ github.repository == 'diveintolava/yuzu-android' }}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -77,4 +77,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          asset_paths: '["./**/*.apk","./**/*.aab"]'
+          asset_paths: '["./**/*.apk"]'

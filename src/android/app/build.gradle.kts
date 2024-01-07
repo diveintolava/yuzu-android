@@ -5,6 +5,8 @@ import android.annotation.SuppressLint
 import kotlin.collections.setOf
 import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
 import com.github.triplet.gradle.androidpublisher.ReleaseStatus
+import java.util.Date
+import java.text.SimpleDateFormat
 
 plugins {
     id("com.android.application")
@@ -53,16 +55,20 @@ android {
     }
 
     defaultConfig {
+
+        val dateStr = SimpleDateFormat("yyyyMMddHH").format(Date()) 
+
         // TODO If this is ever modified, change application_id in strings.xml
-        applicationId = "org.yuzu.yuzu_emu"
+        applicationId = "test.diveintolava.yuzu_emu"
         minSdk = 30
         targetSdk = 34
-        versionName = getGitVersion()
+        versionName = dateStr +"."+  getGitVersion()
 
         versionCode = if (System.getenv("AUTO_VERSIONED") == "true") {
             autoVersion
         } else {
-            1
+            // 1
+            dateStr.toInt()
         }
 
         ndk {
@@ -103,7 +109,7 @@ android {
                 signingConfigs.getByName("default")
             }
 
-            resValue("string", "app_name_suffixed", "yuzu")
+            resValue("string", "app_name_suffixed", "yuzu lava")
             isMinifyEnabled = true
             isDebuggable = false
             proguardFiles(
@@ -116,7 +122,7 @@ android {
         // Attaches 'debug' suffix to version and package name, allowing installation alongside the release build.
         register("relWithDebInfo") {
             isDefault = true
-            resValue("string", "app_name_suffixed", "yuzu Debug Release")
+            resValue("string", "app_name_suffixed", "yuzu lava Debug Release")
             signingConfig = signingConfigs.getByName("default")
             isMinifyEnabled = true
             isDebuggable = true
@@ -272,7 +278,11 @@ fun getGitVersion(): String {
     } else {
         gitVersion
     }
-    return versionName.ifEmpty { "0.0" }
+    
+    return versionName.ifEmpty {  
+        runGitCommand(listOf("git", "describe", "--always", "--long","--tags"))
+            .replace(Regex("(-0)?-[^-]+$"), "") 
+            }
 }
 
 fun getGitHash(): String =
