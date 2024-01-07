@@ -53,7 +53,7 @@ android {
 
     defaultConfig {
         // TODO If this is ever modified, change application_id in strings.xml
-        applicationId = "org.yuzu.yuzu_emu"
+        applicationId = "test.diveintolava.yuzu_emu"
         minSdk = 30
         targetSdk = 34
         versionName = getGitVersion()
@@ -104,7 +104,7 @@ android {
                 signingConfigs.getByName("debug")
             }
 
-            resValue("string", "app_name_suffixed", "yuzu")
+            resValue("string", "app_name_suffixed", "yuzu lava")
             isMinifyEnabled = true
             isDebuggable = false
             proguardFiles(
@@ -117,7 +117,7 @@ android {
         // Attaches 'debug' suffix to version and package name, allowing installation alongside the release build.
         register("relWithDebInfo") {
             isDefault = true
-            resValue("string", "app_name_suffixed", "yuzu Debug Release")
+            resValue("string", "app_name_suffixed", "yuzu lava Debug Release")
             signingConfig = signingConfigs.getByName("debug")
             isMinifyEnabled = true
             isDebuggable = true

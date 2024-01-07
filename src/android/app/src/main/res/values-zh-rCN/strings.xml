@@ -4,14 +4,14 @@
     <string name="app_disclaimer">此软件可以运行 Nintendo Switch 游戏，但不包含任何游戏和密钥文件。&lt;br /&gt;&lt;br /&gt;在开始前，请找到放置于设备存储中的 <![CDATA[<b> prod.keys </b>]]> 文件。&lt;br /&gt;&lt;br /&gt;<![CDATA[<a href=\"https://yuzu-emu.org/help/quickstart\">了解更多</a>]]></string>
     <string name="emulation_notification_channel_name">正在进行模拟</string>
     <string name="emulation_notification_channel_description">在模拟运行时显示持久通知。</string>
-    <string name="emulation_notification_running">yuzu 正在运行</string>
+    <string name="emulation_notification_running">yuzu lava 正在运行</string>
     <string name="notice_notification_channel_name">通知及错误提醒</string>
     <string name="notice_notification_channel_description">当发生错误时显示通知。</string>
     <string name="notification_permission_not_granted">未授予通知权限！</string>
 
     <!-- Setup strings -->
     <string name="welcome">欢迎！</string>
-    <string name="welcome_description">了解如何设置 &lt;b>yuzu&lt;/b> 并进行模拟。</string>
+    <string name="welcome_description">了解如何设置 &lt;b>yuzu lava&lt;/b> 并进行模拟。</string>
     <string name="get_started">开始</string>
     <string name="keys">密钥文件</string>
     <string name="keys_description">使用下方的按钮来选择你的 &lt;b>prod.keys&lt;/b> 文件。</string>
@@ -53,7 +53,7 @@
     <string name="notification_warning_description">yuzu 将无法通知您重要信息。</string>
     <string name="permission_denied">授权遭拒</string>
     <string name="permission_denied_description">您曾多次拒绝权限请求，现在您需要在系统设置中手动授予权限。</string>
-    <string name="about">关于</string>
+    <string name="about">关于yuzu lava</string>
     <string name="about_description">开发版本、贡献者、以及更多</string>
     <string name="warning_help">帮助</string>
     <string name="warning_skip">跳过</string>
